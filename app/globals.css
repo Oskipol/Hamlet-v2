@@ -1,26 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+#hamlet path:nth-child(3){
+    stroke-dasharray: 699.54296875;
+    stroke-dashoffset: 699.54296875;
+    animation: animacja 1.5s ease forwards 2s;
+}
+#hamlet path:nth-child(2){
+    stroke-dasharray: 3951.642578125;
+    stroke-dashoffset: 3951.642578125;
+    animation: animacja 3s ease forwards 3.7s;
+}
+#dot{
+    position: absolute;
+    z-index: -1;
+    width: 10px;
+    opacity: 0;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    offset-path: path('M571.003 231C557.669 257.333 515.602 306 454.002 290C392.402 274 323.002 210 300.002 290C277.002 370 8.20247 255.2 13.0025 144');
+    offset-distance: 0%;
+    animation: move 1.5s ease forwards 2s, swiec 1.5s 3 ease 2s, big 3s ease 3.5s;
+}
+.show{
+    display: flex;
+    opacity: 1;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.hide{
+    display: none;
+    opacity: 0;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes move{
+    to{
+        offset-distance: 100%;
+    }
+}
+@keyframes swiec {
+    0%{
+        opacity: 1;
+        box-shadow: none;
+    }
+    25%{
+        box-shadow: 0 0 0 4px gray,
+        0 0 0 10px white,
+        0 0 20px white,
+        0 0 40px 5px white,
+        0 0 60px 10px white;
+    }
+    50%{
+        box-shadow: none;
+    }
+    75%{
+        box-shadow: 0 0 0 4px gray,
+        0 0 0 10px white,
+        0 0 20px white,
+        0 0 40px 5px white,
+        0 0 60px 10px white;
+    }
+    100%{
+        opacity: 1;
+        box-shadow: none;
+    }
+}
+@keyframes big{
+    0%{
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        left: 0;
+        opacity: 1;
+        top: 0;
+        transform: rotate(0);
+    }
+    100%{
+        width: 500px;
+        height: 500px;
+        left: 35%;
+        top: 2%;
+        opacity: 1;
+        background-color: black;
+        border: #242323 inset 10px;
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes animacja{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+
+@theme{
+    @keyframes hide{
+        to{
+            opacity: 0;
+            display: none;
+            visibility: hidden;
+        }
+    }
+    @keyframes smoke {
+        to{
+            top: -100%;
+        }
+        
+    }
+    @keyframes slideIn {
+        to{
+            bottom: 0;
+        }
+    }
+    @keyframes centre{
+        to{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    @keyframes papyrus{
+        0%{
+            background-image: url('/papyrus1.png');
+            aspect-ratio: 0.73;
+        }
+        33%{
+            background-image: url('/papyrus2.png');
+            aspect-ratio: 0.94;
+        }
+        66%{
+            background-image: url('/papyrus3.png');
+            aspect-ratio: 1.12;
+        }
+        100%{
+            background-image: url('/papyrus.png');
+            aspect-ratio: 1.33;
+        }
+    }
+    @keyframes goIn{
+        to{
+            opacity: 1;
+            filter: blur(0px);
+        }
+    }
+    --animate-goIn: goIn 1s ease forwards 6.3s;
+    --animate-centre: centre 2s ease forwards;
+    --animate-hide: hide 0.1s ease forwards 6.3s;
+    --animate-slideIn: slideIn 2s ease forwards, hide 0.1s ease forwards 6.3s;
+    --animate-smoke: smoke 2s ease-in-out forwards 5s;
+    --font-playfair: 'Playfair Display', serif;
+    --animate-papyrus: papyrus .5s linear forwards .2s;
 }
