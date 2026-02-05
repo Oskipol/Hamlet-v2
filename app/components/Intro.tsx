@@ -7,7 +7,7 @@ const Intro = () => {
     <div className='relative w-full h-screen overflow-hidden'>
 
       <div className='absolute w-full h-full top-0 left-0 animate-hide bg-black z-1'></div>
-      <div className='absolute w-full h-full z-1 bg-gradient-to-b bottom-[-200%] from black to-[#242323] animate-slideIn'></div>
+      <div className='absolute w-full h-full z-1 bg-linear-to-b bottom-[-200%] from black to-[#242323] animate-slideIn'></div>
       <div className='absolute animate-hide left-[50%] top-[50%] z-1 translate-[-50%] scale-50 md:scale-100 lg:scale-180'>
         <div id='dot'></div>
         <svg id="hamlet" width="574" height="320" viewBox="0 0 574 320" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,16 +18,16 @@ const Intro = () => {
         <path d="M571.003 231C557.669 257.333 515.602 306 454.002 290C392.402 274 323.002 210 300.002 290C277.002 370 8.20247 255.2 13.0025 144" stroke="white" strokeWidth={5}/>
         </svg>
     </div>
-        <div className='absolute left-[0%] animate-smoke top-[300%] w-[600px] blur-2xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-[10] scale-100 md:scale-100 lg:scale-180'></div>
-        <div className='absolute left-[10%] animate-smoke top-[250%] w-[600px] blur-2xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-[10] scale-100 md:scale-100 lg:scale-180'></div>
-        <div className='absolute left-[20%] animate-smoke top-[300%] w-[600px] blur-3xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-[10] scale-100 md:scale-100 lg:scale-180'></div>
-        <div className='absolute left-[30%] animate-smoke top-[250%] w-[600px] blur-3xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-[10] scale-100 md:scale-100 lg:scale-180'></div>
-        <div className='absolute left-[50%] animate-smoke top-[250%] w-[600px] blur-3xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-[10] scale-100 md:scale-100 lg:scale-180'></div>
-        <div className='absolute left-[40%] animate-smoke top-[500%] w-[600px] blur-3xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-[10] scale-100 md:scale-100 lg:scale-180'></div>
-        <div className='absolute left-[60%] animate-smoke top-[400%] w-[600px] blur-3xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-[10] scale-100 md:scale-100 lg:scale-180'></div>
-        <div className='absolute left-[70%] animate-smoke top-[300%] w-[600px] blur-3xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-[10] scale-100 md:scale-100 lg:scale-180'></div>
-        <div className='absolute left-[80%] animate-smoke top-[400%] w-[600px] blur-3xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-[10] scale-100 md:scale-100 lg:scale-180'></div>
-        <div className='absolute left-[90%] animate-smoke top-[500%] w-[600px] blur-3xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-[10] scale-100 md:scale-100 lg:scale-180'></div>
+        <div className='absolute left-[0%] animate-smoke top-[300%] w-[600px] blur-2xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
+        <div className='absolute left-[10%] animate-smoke top-[250%] w-[600px] blur-2xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
+        <div className='absolute left-[20%] animate-smoke top-[300%] w-[600px] blur-3xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
+        <div className='absolute left-[30%] animate-smoke top-[250%] w-[600px] blur-3xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
+        <div className='absolute left-[50%] animate-smoke top-[250%] w-[600px] blur-3xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
+        <div className='absolute left-[40%] animate-smoke top-[500%] w-[600px] blur-3xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
+        <div className='absolute left-[60%] animate-smoke top-[400%] w-[600px] blur-3xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
+        <div className='absolute left-[70%] animate-smoke top-[300%] w-[600px] blur-3xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
+        <div className='absolute left-[80%] animate-smoke top-[400%] w-[600px] blur-3xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
+        <div className='absolute left-[90%] animate-smoke top-[500%] w-[600px] blur-3xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
     </div>
   )
 }

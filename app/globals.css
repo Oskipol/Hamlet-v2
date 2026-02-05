@@ -9,6 +9,21 @@ html, body {
   touch-action: pan-y;
 }
 
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #948979;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+  background: #DFD0B8;
+}
+
 #hamlet path:nth-child(3){
     stroke-dasharray: 699.54296875;
     stroke-dashoffset: 699.54296875;
@@ -44,6 +59,29 @@ html, body {
 @keyframes move{
     to{
         offset-distance: 100%;
+    }
+}
+@keyframes ogien{
+    0%, 100%{
+        opacity: .3;
+        box-shadow: 0 0 30px 50px #bf8a49,
+    0 0 40px 150px #9e723c,
+    0 0 50px 250px #7a582f;
+    }
+    25%{
+        box-shadow: 0 0 30px 70px #bf8a49,
+        0 0 40px 150px #9e723c,
+        0 0 50px 250px #7a582f;
+    }
+    50%{
+        box-shadow: 0 0 30px 70px #bf8a49,
+    0 0 40px 200px #9e723c,
+    0 0 50px 250px #7a582f;
+    }
+    75%{
+        box-shadow: 0 0 30px 50px #bf8a49,
+    0 0 40px 200px #9e723c,
+    0 0 50px 300px #7a582f;
     }
 }
 @keyframes swiec {
@@ -160,4 +198,5 @@ html, body {
     --animate-smoke: smoke 2s ease-in-out forwards 5s;
     --font-playfair: 'Playfair Display', serif;
     --animate-papyrus: papyrus .5s linear forwards .2s;
+    --animate-ogien: ogien 1s ease-in-out infinite .5s;
 }

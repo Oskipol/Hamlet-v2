@@ -18,7 +18,7 @@ const AudioPlayer = () => {
 
   return (
     <div>
-    <audio id='muza' src="/ES_Shadowman's Waltz - Franz Gordon.mp3" />
+    <audio id='muza' loop src="/ES_Shadowman's Waltz - Franz Gordon.mp3" />
     <audio id='kkk' src="/Hamlet.mp3" />
     </div>
   )
