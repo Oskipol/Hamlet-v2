@@ -191,12 +191,81 @@ html, body {
             filter: blur(0px);
         }
     }
+    @keyframes pojawianie{
+        to{
+            opacity: 1;
+        }
+    }
+    @keyframes duch1{
+        0%{
+            opacity: 0;
+            transform: translateY(120%);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(20%);
+        }
+    }
+    @keyframes duch2{
+        0%{
+            transform: translateY(20%);
+        }
+        50%{
+            transform: translateY(10%);
+        }
+        100%{
+            transform: translateY(20%);
+        }
+    }
+    @keyframes cien{
+        0%{
+            scale: .5;
+        }
+        50%{
+            scale: .55;
+        }
+        100%{
+            scale: .5;
+        }
+    }
+    @keyframes cien1{
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: .3;
+            scale: .5;
+        }
+    }
+    @keyframes flip{
+        0%{
+            transform: perspective(3000px) rotateY(0deg);
+        }
+        100%{
+            transform: perspective(3000px) rotateY(-180deg);
+        }
+    }
+    @keyframes oc{
+        from{
+            left: 3%;
+        }
+        to{
+            left: 0;
+        }
+    }
+    --animate-oc: oc .8s ease forwards; 
+    --animate-noc: oc .8s ease reverse forwards; 
+    --animate-unflip: flip .8s ease-in-out reverse forwards;
+    --animate-flip: flip .8s ease-in-out forwards;
+    --animate-cien: cien1 2s ease forwards 3s, cien 4s ease infinite 4s;
+    --animate-duch1: duch1 2s ease forwards 2s, duch2 4s ease infinite 4s;
     --animate-goIn: goIn 1s ease forwards 6.3s;
+    --animate-pojawianie: pojawianie 1s ease forwards .5s;
     --animate-centre: centre 2s ease forwards;
     --animate-hide: hide 0.1s ease forwards 6.3s;
     --animate-slideIn: slideIn 2s ease forwards, hide 0.1s ease forwards 6.3s;
     --animate-smoke: smoke 2s ease-in-out forwards 5s;
     --font-playfair: 'Playfair Display', serif;
-    --animate-papyrus: papyrus .5s linear forwards .2s;
+    --animate-papyrus: papyrus .3s ease forwards .2s;
     --animate-ogien: ogien 1s ease-in-out infinite .5s;
 }

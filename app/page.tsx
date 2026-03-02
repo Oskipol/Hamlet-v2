@@ -6,6 +6,7 @@ import AudioPlayer from "./components/AudioPlayer";
 import React from "react";
 import { div } from "motion/react-client";
 import Wstep from "./components/Wstep";
+import Akt1 from "./components/Akt1";
 
 export default function Home() {
   const [play, setPlay] = React.useState(false);
@@ -22,6 +23,7 @@ export default function Home() {
           <Main />
           <AudioPlayer />
           <Wstep />
+          <Akt1 />
         </div>
        )}
       </div>
