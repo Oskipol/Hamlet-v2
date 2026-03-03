@@ -28,6 +28,11 @@ const Ksiazka = ({ dane }: KsiazkaProps) => {
         {index>0&&(
           <img key={flipCount} src="page.png" style={{width: `${100-(index*2)}%`}} className={`h-[98%] ${isAnimating ? (isFlipped?"animate-oc":"animate-noc"):""} border-b-yellow-500 border-r-2 rounded-r-2xl border-l-amber-50 left-[0%] top-[50%] translate-y-[-50%] absolute object-cover`} alt=""></img>
         )}
+
+
+
+
+        
         {index===0&&(
           <div key={flipCount} onClick={handleClick} className={`${isAnimating ? (isFlipped?"animate-flip":"animate-unflip"):""} w-full h-full relative z-12 hover:cursor-pointer`} style={{ transformOrigin: 'left center', transformStyle: 'preserve-3d' }}>
           <img src={item.obraz} className='w-full h-full object-cover absolute inset-0' style={{ backfaceVisibility: 'hidden' }} alt="" />
