@@ -11,12 +11,12 @@ const Akt1 = () => {
     },
     {
       obraz: "book2.jpg",
-      tekst1: "",
+      tekst1: "Akcja sztuki rozgrywa się prawie w całości na zamku króla Danii w Elsynorze i rozpoczyna się po nagłej śmierci króla Hamleta. Na tron wstępuje jego brat Klaudiusz i żeni się z wdową po Hamlecie – królową Gertrudą. Do kraju wraca z Wittenbergi syn zmarłego króla, również Hamlet.",
       tekst2: ""
     },
     {
       obraz: "book3.jpg",
-      tekst1: "",
+      tekst1: "gęś",
       tekst2: ""
     }
   ]

@@ -40,7 +40,7 @@ const Main = () => {
   ];
   return (
     <div className="w-full h-full absolute top-0 left-0 font-playfair z-0 overflow-y-auto overflow-x-hidden" style={{background: "url('/tlo.jpg')", backgroundSize: 'cover', backgroundPosition: 'center'}} >
-      <div className='animate-goIn opacity-0 blur-2xl'>
+      <div className='animate-goIn opacity-100 blur-2xl'>
       <FocusCards cards={focusCards} />
       </div>
     </div>

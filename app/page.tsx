@@ -19,7 +19,7 @@ export default function Home() {
         <div onClick={() => setPlay(true)} className="w-full font-playfair h-full flex items-center justify-center cursor-pointer text-white font-bold text-[3rem] md:text-[5rem] lg:text-[8rem]">Click to Play</div>
        ) : (
         <div>
-          <Intro />
+          {/* <Intro /> */}
           <Main />
           <AudioPlayer />
           <Wstep />
