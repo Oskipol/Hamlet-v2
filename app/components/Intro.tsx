@@ -18,16 +18,16 @@ const Intro = () => {
         <path d="M571.003 231C557.669 257.333 515.602 306 454.002 290C392.402 274 323.002 210 300.002 290C277.002 370 8.20247 255.2 13.0025 144" stroke="white" strokeWidth={5}/>
         </svg>
     </div>
-        <div className='absolute left-[0%] animate-smoke top-[300%] w-[600px] blur-2xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
-        <div className='absolute left-[10%] animate-smoke top-[250%] w-[600px] blur-2xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
-        <div className='absolute left-[20%] animate-smoke top-[300%] w-[600px] blur-3xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
-        <div className='absolute left-[30%] animate-smoke top-[250%] w-[600px] blur-3xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
-        <div className='absolute left-[50%] animate-smoke top-[250%] w-[600px] blur-3xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
-        <div className='absolute left-[40%] animate-smoke top-[500%] w-[600px] blur-3xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
-        <div className='absolute left-[60%] animate-smoke top-[400%] w-[600px] blur-3xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
-        <div className='absolute left-[70%] animate-smoke top-[300%] w-[600px] blur-3xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
-        <div className='absolute left-[80%] animate-smoke top-[400%] w-[600px] blur-3xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
-        <div className='absolute left-[90%] animate-smoke top-[500%] w-[600px] blur-3xl h-[600px] translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
+        <div className='absolute left-[0%] animate-smoke top-[300%] w-150 blur-2xl h-150 translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
+        <div className='absolute left-[10%] animate-smoke top-[250%] w-150 blur-2xl h-150 translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
+        <div className='absolute left-[20%] animate-smoke top-[300%] w-150 blur-3xl h-150 translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
+        <div className='absolute left-[30%] animate-smoke top-[250%] w-150 blur-3xl h-150 translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
+        <div className='absolute left-[50%] animate-smoke top-[250%] w-150 blur-3xl h-150 translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
+        <div className='absolute left-[40%] animate-smoke top-[500%] w-150 blur-3xl h-150 translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
+        <div className='absolute left-[60%] animate-smoke top-[400%] w-150 blur-3xl h-150 translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
+        <div className='absolute left-[70%] animate-smoke top-[300%] w-150 blur-3xl h-150 translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
+        <div className='absolute left-[80%] animate-smoke top-[400%] w-150 blur-3xl h-150 translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
+        <div className='absolute left-[90%] animate-smoke top-[500%] w-150 blur-3xl h-150 translate-[-50%] rounded-[50%] bg-black z-10 scale-100 md:scale-100 lg:scale-180'></div>
     </div>
   )
 }

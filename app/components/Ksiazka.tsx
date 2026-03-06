@@ -2,7 +2,7 @@ import { get } from 'http';
 import React from 'react'
 
 interface Dane {
-    [key: string]: string;
+    [key: string]: string | undefined;
 }
 interface KsiazkaProps {
     dane: Dane[];
@@ -27,8 +27,22 @@ const Ksiazka = ({ dane }: KsiazkaProps) => {
 
     if (chwila) {
       if (currentPage > 0) {
+        const playPageFlip = () => {
+  const sfx = new Audio('/page-flip.mp3');
+  var promisePlaying = sfx.play();
+  if (promisePlaying !== undefined) {
+    promisePlaying.then(_ => {
+    }).catch(error => {
+    });
+  }
+};
         setClosingAll(true);
         const stagger = 200;
+        for(let i=currentPage; i>0; i--){
+          setTimeout(()=>{
+            playPageFlip();
+          }, (currentPage - i) * 100);
+        }
         const totalTime = (currentPage - 1) * stagger + 500;
         setTimeout(() => {
           bookCloseAudio.currentTime = 0;
@@ -130,6 +144,30 @@ const Ksiazka = ({ dane }: KsiazkaProps) => {
 
     return base;
   };
+  const PlaytTekst = (nazwa: string | undefined) => () => {
+    if (!nazwa) return;
+    
+    if (activeAudio.current) {
+      activeAudio.current.pause();
+      activeAudio.current.currentTime = 0;
+      activeAudio.current = null;
+      return;
+    }
+    
+    const audio = new Audio(nazwa);
+    activeAudio.current = audio;
+    audio.addEventListener('ended', () => {
+      activeAudio.current = null;
+    });
+    const audioPlay = audio.play();
+    if (audioPlay !== undefined) {
+      audioPlay.then(_ => {
+      }).catch(error => {
+      });
+    }
+  };
+
+  const activeAudio = React.useRef<HTMLAudioElement | null>(null);
 
   return (
     <div className='relative aspect-4/6 z-10' style={{ perspective: '3000px', width: 'min(34vw, 51vh)' }}>
@@ -148,6 +186,11 @@ const Ksiazka = ({ dane }: KsiazkaProps) => {
                 onClick={() => handlePage(index)}
                 alt=""
               />
+              {index === currentPage + 1 && (
+                <div onClick={PlaytTekst(item.dzwiek)} className='absolute m-5 cursor-pointer rounded-[50%] w-[20%] aspect-square right-0 z-40 object-cover bottom-0'>
+                <img src="button.png" alt="" />
+              </div>
+              )}
               <div className='absolute bg-amber-100 opacity-60 blur-2xl w-[70%] h-[80%] top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%]'></div>
               <p style={{transform: `rotateY(${index <= currentPage ? 180 : 0}deg)`}} className='absolute font-playfair w-[70%] h-[80%] top-[50%] lg:text-3xl md:text-2xl text-l translate-y-[-50%] overflow-y-scroll overflow-x-hidden text-black left-[50%] translate-x-[-50%] text-center'>
                 {index<=currentPage ? item.tekst2 : item.tekst1}
@@ -169,8 +212,8 @@ const Ksiazka = ({ dane }: KsiazkaProps) => {
                 alt=""
               />
               <div
-                className={`w-full h-full absolute inset-0 bg-[${item.kolor}] rounded-r-sm shadow-inner flex items-center justify-center`}
-                style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+                className={`w-full h-full absolute inset-0 rounded-r-sm shadow-inner flex items-center justify-center`}
+                style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)', background: item.kolor }}
               >
                 <div className='w-[90%] h-[95%] border border-gray-500 rounded-sm'></div>
               </div>
