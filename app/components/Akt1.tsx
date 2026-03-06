@@ -7,18 +7,30 @@ const Akt1 = () => {
     {
       obraz: "book1.jpg",
       tekst1: "",
-      tekst2: ""
+      tekst2: "",
+      kolor: "#252525"
     },
     {
-      obraz: "book2.jpg",
+      obraz: "strona.jpg",
       tekst1: "Akcja sztuki rozgrywa się prawie w całości na zamku króla Danii w Elsynorze i rozpoczyna się po nagłej śmierci króla Hamleta. Na tron wstępuje jego brat Klaudiusz i żeni się z wdową po Hamlecie – królową Gertrudą. Do kraju wraca z Wittenbergi syn zmarłego króla, również Hamlet.",
+      tekst2: "Zrozpaczony po śmierci ojca książę jest dodatkowo zgorszony postępowaniem matki, która wyszła za jego stryja niedługo po śmierci poprzedniego męża (w czasach Szekspira było to uznawane za kazirodztwo). Za zgodą króla Laertes, syn Poloniusza i brat Ofelii, wyjeżdża do Francji."
+    },
+    {
+      obraz: "strona.jpg",
+      tekst1: "Przed wyjazdem radzi Ofelii, by nie wierzyła w wyznania miłosne Hamleta, które, nawet jeżeli są prawdziwe, nie doprowadzą do niczego dobrego z powodu różnicy w pochodzeniu. Także Poloniusz zakazuje córce spotykać się z Hamletem, bojąc się o jej dobre imię.",
+      tekst2: "Tymczasem na zamku zaczyna pojawiać się duch zmarłego króla Hamleta. Poinformowany o tym przez swego przyjaciela Horacego i oficerów straży książę spotyka się z Duchem. Ten wyznaje młodemu Hamletowi, iż został zabity przez brata – obecnego króla i każe synowi"
+    },
+    {
+      obraz: "strona.jpg",
+      tekst1: "przysiąc, że zostanie przez niego pomszczony. Zakazuje mu jednak mścić się na matce.",
       tekst2: ""
     },
     {
-      obraz: "book3.jpg",
-      tekst1: "gęś",
-      tekst2: ""
+      obraz: "strona.jpg",
+      tekst1: "",
+      tekst2: "",
     }
+
   ]
   return (
     <div id='Akt I' style={{background: "url('tlo2.jpg')", backgroundSize: 'cover', backgroundPosition: 'center'}} className='w-full overflow-hidden flex items-center justify-center opacity-0 delay-0 animate-pojawianie hide h-full absolute inset-0'>
