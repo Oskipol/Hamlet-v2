@@ -262,6 +262,12 @@ html, body {
             scale: 1;
         }
     }
+    @keyframes nieMa{
+        to{
+            display: none;
+            visibility: hidden;
+        }
+    }
     @keyframes zniknij{
         to{
             opacity: 0;
@@ -286,6 +292,27 @@ html, body {
             transform: rotateZ(-20deg);
         }
     }
+    @keyframes wDol{
+        from{
+            transform: translateY(-300%);
+        }
+        to{
+            transform: translateY(0%);
+        }
+    }
+    @keyframes wGore{
+        from{
+            transform: translateY(300%);
+        }
+        to{
+            transform: translateY(0);
+        }
+    }
+    --animate-wGore: wGore 3s ease forwards;
+    --animate-rozszerz: rozszerz 1s ease forwards 1s;
+    --animate-nieMa: pojawianie 1s ease forwards 1s, zniknij 1s ease forwards 3s, nieMa .1s ease forwards 4s;
+    --animate-nieMa2: pojawianie 1s ease forwards 2s, zniknij 1s ease forwards 3s, nieMa .1s ease forwards 4s;
+    --animate-wDol: wDol 2s ease forwards;
     --animate-reka: reka 5s ease infinite;
     --animate-mruga: mruga 6s ease-in-out infinite;
     --animate-zniknij: zniknij 1s ease forwards 1s;
@@ -301,7 +328,7 @@ html, body {
     --animate-centre: centre 2s ease forwards;
     --animate-hide: hide 0.1s ease forwards 6.3s;
     --animate-slideIn: slideIn 2s ease forwards, hide 0.1s ease forwards 6.3s;
-    --animate-smoke: smoke 2s ease-in-out forwards 5s;
+    --animate-smoke: smoke 2s ease-in-out forwards 5s, nieMa .1s ease forwards 7s;
     --font-playfair: 'Playfair Display', serif;
     --animate-papyrus: papyrus .3s ease forwards .2s;
     --animate-ogien: ogien 1s ease-in-out infinite .5s;

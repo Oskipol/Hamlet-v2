@@ -19,6 +19,7 @@ const Ksiazka = ({ dane }: KsiazkaProps) => {
   const [animationDir, setAnimationDir] = React.useState<'flip' | 'unflip'>('flip');
   const [closingAll, setClosingAll] = React.useState(false);
   const [isSpread, setIsSpread] = React.useState(true);
+  const [kolor, setKolor]=React.useState('#252525');
 
   const handleClick = () => {
     const bookOpenAudio = document.getElementById('bookOpen') as HTMLAudioElement;
@@ -170,8 +171,8 @@ const Ksiazka = ({ dane }: KsiazkaProps) => {
   const activeAudio = React.useRef<HTMLAudioElement | null>(null);
 
   return (
-    <div className='relative aspect-4/6 z-10' style={{ perspective: '3000px', width: 'min(34vw, 51vh)' }}>
-      <div className='bg-[#252525] w-full h-full absolute left-0 top-0 rounded-r-sm'></div>
+    <div className='relative ml-[30%] aspect-4/6 z-10' style={{ perspective: '3000px', width: 'min(34vw, 51vh)', containerType: "inline-size" }}>
+      <div style={{background: kolor}} className='w-full h-full absolute left-0 top-0 rounded-r-sm'></div>
       <div className='bg-gray-500 w-[2%] h-full absolute z-11 left-[0%] top-0'></div>
       {dane.map((item, index) => (
         <React.Fragment key={index}>
@@ -191,8 +192,8 @@ const Ksiazka = ({ dane }: KsiazkaProps) => {
                 <img src="button.png" alt="" />
               </div>
               )}
-              <div className='absolute bg-amber-100 opacity-60 blur-2xl w-[70%] h-[80%] top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%]'></div>
-              <p style={{transform: `rotateY(${index <= currentPage ? 180 : 0}deg)`}} className='absolute font-playfair w-[70%] h-[80%] top-[50%] lg:text-3xl md:text-2xl text-l translate-y-[-50%] overflow-y-scroll overflow-x-hidden text-black left-[50%] translate-x-[-50%] text-center'>
+              <div className='absolute bg-amber-100 opacity-30 blur-2xl w-[70%] h-[80%] top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%]'></div>
+              <p style={{transform: `rotateY(${index <= currentPage ? 180 : 0}deg)`, fontSize: '5.5cqi'}} className='absolute font-playfair w-[70%] h-[80%] top-[56%] translate-y-[-50%] overflow-y-scroll overflow-x-hidden text-black left-[50%] translate-x-[-50%] text-center'>
                 {index<=currentPage ? item.tekst2 : item.tekst1}
               </p>
             </div>
@@ -207,7 +208,8 @@ const Ksiazka = ({ dane }: KsiazkaProps) => {
             >
               <img
                 src={item.obraz}
-                className='w-full h-full object-cover absolute inset-0'
+                onClick={()=>{setKolor(item.kolor?item.kolor:"")}}
+                className='w-full h-full absolute inset-0'
                 style={{ backfaceVisibility: 'hidden' }}
                 alt=""
               />

@@ -21,7 +21,18 @@ export const Card = React.memo(
       onMouseLeave={() => setHovered(null)}
       onTouchStart={() => setHovered(index)}
       onTouchEnd={() => setHovered(null)}
-      onClick={()=>{document.getElementById(card.title)?.classList.remove('hide');}}
+      onClick={() => {
+        const el = document.getElementById(card.title);
+        if (el) {
+          el.classList.remove('hide');
+          requestAnimationFrame(() => {
+            el.getAnimations({ subtree: true }).forEach(anim => {
+              anim.cancel();
+              anim.play();
+            });
+          });
+        }
+      }}
       className={cn(
         "rounded-lg relative cursor-pointer bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out",
         hovered !== null && hovered !== index && "blur-sm scale-[0.98]"

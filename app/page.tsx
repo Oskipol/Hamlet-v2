@@ -8,6 +8,8 @@ import { div } from "motion/react-client";
 import Wstep from "./components/Wstep";
 import Akt1 from "./components/Akt1";
 import Akt2 from "./components/Akt2";
+import Akt3 from "./components/Akt3";
+import Akt4 from "./components/Akt4";
 
 export default function Home() {
   const [play, setPlay] = React.useState(false);
@@ -26,6 +28,8 @@ export default function Home() {
           <Wstep />
           <Akt1 />
           <Akt2 />
+          <Akt3 />
+          <Akt4 />
         </div>
        )}
       </div>
