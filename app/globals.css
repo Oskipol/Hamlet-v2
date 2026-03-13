@@ -308,6 +308,67 @@ html, body {
             transform: translateY(0);
         }
     }
+    @keyframes idz{
+        0%{
+            left: 100%;
+            bottom: -100%;
+            rotate: 20deg;
+        }
+        10%{
+            left: 100%;
+            bottom: -40%;
+            rotate: 20deg;
+        }
+        50%{
+            left: 35%;
+            bottom: 35%;
+            rotate: 25deg;
+        }
+        100%{
+            left: 20%;
+            bottom: 0%;
+            rotate: 0deg;
+        }
+        
+    }
+    @keyframes oho{
+        to{
+            transform: translateX(-10%);
+        }
+    }
+    @keyframes buja{
+        0%{
+            rotate: 0deg;
+        }
+        50%{
+            rotate: 5deg;
+        }
+        80%{
+            rotate: -2deg;
+        }
+        100%{
+            rotate: 0deg
+        }
+    }
+    @keyframes krople{
+        from{
+            opacity: 0
+        }
+        to{
+            opacity: .7;
+        }
+    }
+    @keyframes deszcz{
+        0%{
+            background-position: 0% 0%;
+        }
+        100%{
+            background-position: 100% 100%;
+        }
+    }
+    --animate-deszcz: deszcz 2s linear infinite;
+    --animate-krople: krople 10s ease forwards 1.5s;
+    --animate-idz: idz 7s ease-in-out forwards, oho 2s ease forwards 3s, buja 8s infinite 7s;
     --animate-wGore: wGore 3s ease forwards;
     --animate-rozszerz: rozszerz 1s ease forwards 1s;
     --animate-nieMa: pojawianie 1s ease forwards 1s, zniknij 1s ease forwards 3s, nieMa .1s ease forwards 4s;
