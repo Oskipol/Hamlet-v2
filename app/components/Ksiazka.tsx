@@ -1,5 +1,5 @@
 import { get } from 'http';
-import React from 'react'
+import React, {useState} from 'react'
 
 interface Dane {
     [key: string]: string | undefined;
@@ -9,17 +9,17 @@ interface KsiazkaProps {
 }
 
 const Ksiazka = ({ dane }: KsiazkaProps) => {
-  const [isFlipped, setIsFlipped] = React.useState(false);
-  const [flipCount, setFlipCount] = React.useState(0);
-  const [isAnimating, setIsAnimating] = React.useState(false);
-  const [chwila, setChwila] = React.useState(false);
+  const [isFlipped, setIsFlipped] = useState(false);
+  const [flipCount, setFlipCount] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [chwila, setChwila] = useState(false);
 
-  const [currentPage, setCurrentPage] = React.useState(0);
-  const [animatingPage, setAnimatingPage] = React.useState<number | null>(null);
-  const [animationDir, setAnimationDir] = React.useState<'flip' | 'unflip'>('flip');
-  const [closingAll, setClosingAll] = React.useState(false);
-  const [isSpread, setIsSpread] = React.useState(true);
-  const [kolor, setKolor]=React.useState('#252525');
+  const [currentPage, setCurrentPage] = useState(0);
+  const [animatingPage, setAnimatingPage] = useState<number | null>(null);
+  const [animationDir, setAnimationDir] = useState<'flip' | 'unflip'>('flip');
+  const [closingAll, setClosingAll] = useState(false);
+  const [isSpread, setIsSpread] = useState(true);
+  const [kolor, setKolor]=useState('#252525');
 
   const handleClick = () => {
     const bookOpenAudio = document.getElementById('bookOpen') as HTMLAudioElement;
@@ -29,7 +29,7 @@ const Ksiazka = ({ dane }: KsiazkaProps) => {
     if (chwila) {
       if (currentPage > 0) {
         const playPageFlip = () => {
-  const sfx = new Audio('/page-flip.mp3');
+  const sfx = new Audio('/Hamlet/page-flip.mp3');
   var promisePlaying = sfx.play();
   if (promisePlaying !== undefined) {
     promisePlaying.then(_ => {
@@ -189,7 +189,7 @@ const Ksiazka = ({ dane }: KsiazkaProps) => {
               />
               {index === currentPage + 1 && (
                 <div onClick={PlaytTekst(item.dzwiek)} className='absolute m-5 cursor-pointer rounded-[50%] w-[20%] aspect-square right-0 z-40 object-cover bottom-0'>
-                <img src="button.png" alt="" />
+                <img src="/Hamlet/button.png" alt="" />
               </div>
               )}
               <div className='absolute bg-amber-100 opacity-30 blur-2xl w-[70%] h-[80%] top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%]'></div>
@@ -223,9 +223,9 @@ const Ksiazka = ({ dane }: KsiazkaProps) => {
           )}
         </React.Fragment>
       ))}
-      <audio id='bookClose' src="book-close.mp3"></audio>
-      <audio id='bookOpen' src="book-open.mp3"></audio>
-      <audio id='pageFlip' src="page-flip.mp3"></audio>
+      <audio id='bookClose' src="/Hamlet/book-close.mp3"></audio>
+      <audio id='bookOpen' src="/Hamlet/book-open.mp3"></audio>
+      <audio id='pageFlip' src="/Hamlet/page-flip.mp3"></audio>
     </div>
   );
 };

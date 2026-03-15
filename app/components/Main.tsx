@@ -6,40 +6,40 @@ const Main = () => {
   const focusCards=[
     {
       title: 'Wstęp',
-      src: '/1.jpg'
+      src: '/Hamlet/1.jpg'
     },
     {
       title: "Akt I",
-      src: "/2.png"
+      src: "/Hamlet/2.png"
     },
     {
       title: "Akt II",
-      src: "/3.png"
+      src: "/Hamlet/3.png"
     },
     {
       title: "Akt III",
-      src: "/4.png"
+      src: "/Hamlet/4.png"
     },
     {
       title: "Akt IV",
-      src: "/5.png"
+      src: "/Hamlet/5.png"
     },
     {
       title: "Akt V",
-      src: "/smierc1.jpg"
+      src: "/Hamlet/smierc1.jpg"
     },
     {
       title: "Postacie",
-      src: "/6.png"
+      src: "/Hamlet/6.png"
     },
     {
       title: "Problematyka",
-      src: "/k0.jpg"
+      src: "/Hamlet/k0.jpg"
     }
 
   ];
   return (
-    <div className="w-full h-full absolute top-0 left-0 font-playfair z-0 overflow-y-auto overflow-x-hidden" style={{background: "url('/tlo.jpg')", backgroundSize: 'cover', backgroundPosition: 'center'}} >
+    <div className="w-full h-full absolute top-0 left-0 font-playfair z-0 overflow-y-auto overflow-x-hidden" style={{background: "url('/Hamlet/tlo.jpg')", backgroundSize: 'cover', backgroundPosition: 'center'}} >
       <div className='animate-goIn opacity-100 blur-2xl'>
       <FocusCards cards={focusCards} />
       </div>

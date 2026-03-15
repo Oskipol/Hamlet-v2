@@ -169,19 +169,19 @@ html, body {
     }
     @keyframes papyrus{
         0%{
-            background-image: url('/papyrus1.png');
+            background-image: url('/Hamlet/papyrus1.png');
             aspect-ratio: 0.73;
         }
         33%{
-            background-image: url('/papyrus2.png');
+            background-image: url('/Hamlet/papyrus2.png');
             aspect-ratio: 0.94;
         }
         66%{
-            background-image: url('/papyrus3.png');
+            background-image: url('/Hamlet/papyrus3.png');
             aspect-ratio: 1.12;
         }
         100%{
-            background-image: url('/papyrus.png');
+            background-image: url('/Hamlet/papyrus.png');
             aspect-ratio: 1.33;
         }
     }
@@ -363,9 +363,50 @@ html, body {
             background-position: 0% 0%;
         }
         100%{
-            background-position: 100% 100%;
+            background-position: 20% 100%;
         }
     }
+    @keyframes piorun{
+        0%{
+        opacity: 0;
+        }
+        20%{
+        opacity: 0;
+        }
+        21%{
+        opacity: 1;
+        }
+        25%{
+        opacity: 0;
+        }
+        30%{
+        opacity: 0;
+        }
+        31%{
+        opacity: 1;
+        }
+        35%{
+        opacity: 0;
+        }
+        100%{
+        opacity: 0;
+    }
+    }
+    @keyframes skrzynia{
+        from{
+            background: url('/Hamlet/chest.png');
+            background-size: cover;
+            background-position: center;
+        }
+        to{
+            background: url('/Hamlet/chest.gif');
+            background-size: cover;
+            background-position: center;
+        }
+    }
+    --animate-pojawienie2: duze 1s ease forwards 2s, papyrus .3s ease forwards 3s;
+    --animate-skrzynia: duze 1s ease forwards, skrzynia .5s ease forwards 1s;
+    --animate-piorun: piorun 6s linear infinite;
     --animate-deszcz: deszcz 2s linear infinite;
     --animate-krople: krople 10s ease forwards 1.5s;
     --animate-idz: idz 7s ease-in-out forwards, oho 2s ease forwards 3s, buja 8s infinite 7s;
