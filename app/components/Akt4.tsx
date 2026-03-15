@@ -31,6 +31,7 @@ const Akt4 = () => {
       return () => observer.disconnect();
     }, []);
   const handlePowrot = () => {
+    setChest(false);
     const txt=document.getElementById("txt") as HTMLAudioElement;
     txt.pause();
     if (audioRef.current) {
