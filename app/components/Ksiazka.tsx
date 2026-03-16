@@ -189,7 +189,7 @@ const Ksiazka = ({ dane }: KsiazkaProps) => {
               />
               {index === currentPage + 1 && (
                 <div onClick={PlaytTekst(item.dzwiek)} className='absolute m-5 cursor-pointer rounded-[50%] w-[20%] aspect-square right-0 z-40 object-cover bottom-0'>
-                <img src="/Hamlet/button.png" alt="" />
+                <img className='hover:-translate-y-1 duration-300' src="/Hamlet/button.png" alt="" />
               </div>
               )}
               <div className='absolute bg-amber-100 opacity-30 blur-2xl w-[70%] h-[80%] top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%]'></div>
