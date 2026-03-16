@@ -481,6 +481,18 @@ html, body {
             z-index: 5;
         }
     }
+    @keyframes wPrawo{
+        to{
+            translate: 10px 0;
+        }
+    }
+    @keyframes wLewo{
+        to{
+            translate: -10px 0;
+        }
+    }
+    --animate-wPrawo: wPrawo 4s ease forwards;
+    --animate-wLewo: wLewo 4s ease forwards;
     --animate-smierc: smierc 10s ease infinite;
     --animate-smierc2: smierc2 10s ease infinite;
     --animate-smierc3: smierc3 10s ease infinite;

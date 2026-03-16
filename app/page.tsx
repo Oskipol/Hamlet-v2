@@ -11,6 +11,7 @@ import Akt2 from "./components/Akt2";
 import Akt3 from "./components/Akt3";
 import Akt4 from "./components/Akt4";
 import Akt5 from "./components/Akt5";
+import Postacie from "./components/Postacie";
 
 export default function Home() {
   const [play, setPlay] = React.useState(false);
@@ -32,6 +33,7 @@ export default function Home() {
           <Akt3 />
           <Akt4 />
           <Akt5 />
+          <Postacie/>
         </div>
        )}
       </div>
