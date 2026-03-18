@@ -491,7 +491,16 @@ html, body {
             translate: -10px 0;
         }
     }
+    @keyframes drzwi{
+        0%{
+            transform: scale(1) translate(-0%, -0%);
 
+        }
+        100%{
+            transform: scale(3) translate(-7%, -18%);
+        }
+    }
+    --animate-drzwi: drzwi 3s ease forwards 3s;
     --animate-wPrawo: wPrawo 4s ease forwards;
     --animate-wLewo: wLewo 4s ease forwards;
     --animate-smierc: smierc 10s ease infinite;
