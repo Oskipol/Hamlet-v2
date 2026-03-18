@@ -62,7 +62,7 @@ const Postacie = () => {
         {
             name: "Fortynbras",
             opis: "Królewicz norweski. Trudno byłoby go nawet nazwać drugoplanowym bohaterem dramatu (pojawia się osobiście tylko dwukrotnie i to na krótko), gdyby nie to, że pełni w dramacie ważną funkcję. Po pierwsze zdecydowany, dumny i wojowniczy Fortynbras stanowi w pewnym stopniu antytezę Hamleta – filozofa i moralisty. Zestawiając poczynania Fortynbrasa i swoje Hamlet tym wyraźniej widzi swoją słabość i nieumiejętność wykonania swej powinności. To właśnie Fortynbrasa w swej ostatniej woli wskazał na nowego władcę Danii. Może on być szansą na pozytywną przyszłość po ogromie zła i tragedii, jakie przez kilka miesięcy miały miejsce w Elsynorze. Niektórzy [kto?] jednak interpretują ostatnią scenę dramatu jako ostateczne zwycięstwo stąpającego twardo po ziemi materialisty, jakim jest Fortynbras, nad idealistą Hamletem; w tym kontekście Norweg może być uznawany za przedstawiciela złej strony pokonującej dobrą. Interpretacji takiej dokonał Zbigniew Herbert w swoim wierszu Tren Fortynbrasa, w którym zasugerował, iż nowy władca Danii będzie sprawował rządy żelazną ręką. ",
-            zdjecie: "/Hamlet/Fortnbras.jpg",
+            zdjecie: "/Hamlet/Fortynbras.jpg",
             dzwiek: "Fortynbras"
         }
     ];
@@ -121,7 +121,7 @@ const Postacie = () => {
     <audio className='dzwieki' id='Laertes' src="/Hamlet/Laertes.mp3"></audio>
     <audio className='dzwieki' id='Horace' src="/Hamlet/Horace.mp3"></audio>
     <audio className='dzwieki' id='dwuch' src="/Hamlet/dwuch.mp3"></audio>
-    <audio className='dzwieki' id='Fortynbras' src="/Hamlet/Fortnbras.mp3"></audio>
+    <audio className='dzwieki' id='Fortynbras' src="/Hamlet/Fortynbras.mp3"></audio>
     </div>
   )
 }
