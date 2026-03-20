@@ -30,7 +30,7 @@ const Ksiazka = ({ dane }: KsiazkaProps) => {
       if (currentPage > 0) {
         const playPageFlip = () => {
   const sfx = new Audio('/Hamlet/page-flip.mp3');
-  var promisePlaying = sfx.play();
+  const promisePlaying = sfx.play();
   if (promisePlaying !== undefined) {
     promisePlaying.then(_ => {
     }).catch(error => {
@@ -193,7 +193,7 @@ const Ksiazka = ({ dane }: KsiazkaProps) => {
               </div>
               )}
               <div className='absolute bg-amber-100 opacity-30 blur-2xl w-[70%] h-[80%] top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%]'></div>
-              <p style={{transform: `rotateY(${index <= currentPage ? 180 : 0}deg)`, fontSize: '5.5cqi'}} className='absolute text-shadow-xs text-shadow-[rgba(0,0,0,0.5)] font-playfair w-[70%] h-[80%] top-[56%] translate-y-[-50%] overflow-y-scroll overflow-x-hidden text-black left-[50%] translate-x-[-50%] text-center'>
+              <p style={{transform: `rotateY(${index <= currentPage ? 180 : 0}deg)`, fontSize: '5.5cqi'}} className='absolute font-playfair w-[70%] h-[80%] top-[56%] translate-y-[-50%] overflow-y-scroll overflow-x-hidden text-black left-[50%] translate-x-[-50%] text-center'>
                 {index<=currentPage ? item.tekst2 : item.tekst1}
               </p>
             </div>

@@ -39,8 +39,8 @@ const Akt3 = () => {
   const [mowi, setMowi] = React.useState(false);
   const dym=()=>{
     const cytat=document.querySelectorAll(".cytat") as NodeListOf<HTMLAudioElement>;
-    var randomIndex = Math.floor(Math.random() * 11) + 1;
-      var isPlaying = false;
+    const randomIndex = Math.floor(Math.random() * 11) + 1;
+      let isPlaying = false;
       cytat.forEach((audio) => {
         if (!audio.paused) {
           isPlaying = true;
@@ -53,7 +53,7 @@ const Akt3 = () => {
         });
       }
       else{
-      setMowi(true);
+      setMowi(true); 
       setTimeout(() => {setMowi(false)}, cytat[randomIndex-1].duration * 1000);
       cytat[randomIndex-1].currentTime = 0;
       cytat[randomIndex-1].play();
