@@ -8,13 +8,18 @@ const Akt4 = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const audioRef = useRef<HTMLAudioElement>(null);
   const [volume] = useAtom(VolumeAtom);
+  const volumeRef=useRef(volume);
   const [chest, setChest] = useState(false);
+
+  useEffect(()=>{
+    volumeRef.current=volume;
+  }, [volume])
   useEffect(() => {
       const observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
           if (mutation.attributeName === 'class') {
             const element = containerRef.current;
-            if (element && !element.classList.contains('hide')&&!volume) {
+            if (element && !element.classList.contains('hide')&&!volumeRef.current) {
               audioRef.current?.play();
             }
             else{

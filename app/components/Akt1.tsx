@@ -8,7 +8,7 @@ const Akt1 = () => {
       obraz: "/Hamlet/book1.jpg",
       tekst1: "",
       tekst2: "",
-      kolor: "#252525"
+      kolor: "#051628"
     },
     {
       obraz: "/Hamlet/strona.jpg",
